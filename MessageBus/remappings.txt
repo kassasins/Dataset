@@ -1,4 +1,0 @@
-forge-std/=lib/forge-std/src/
-contracts/message/=src/message/
-contracts/interfaces/=src/interfaces/
-contracts/safeguard/=src/safeguard/
