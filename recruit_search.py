@@ -39,6 +39,7 @@ import argparse
 import csv
 import json
 import os
+import re
 import sys
 import time
 from dataclasses import dataclass, field
@@ -134,6 +135,17 @@ class GitHubClient:
         except SystemExit:
             return []
 
+    def get_readme(self, full_name: str) -> str:
+        """Return the plain text of a public repo's README (empty if none/error)."""
+        import base64
+        try:
+            data = self._request(f"{API_BASE}/repos/{full_name}/readme")
+            if isinstance(data, dict) and data.get("content"):
+                return base64.b64decode(data["content"]).decode("utf-8", errors="replace")
+        except SystemExit:
+            pass
+        return ""
+
 
 # ---------------------------------------------------------------------------
 # 結果モデル
@@ -147,9 +159,12 @@ class Candidate:
     company: str = ""
     location: str = ""
     html_url: str = ""
+    blog: str = ""           # profile "website" field (public)
+    twitter: str = ""        # profile Twitter/X (public)
     followers: int = 0
     public_repos: int = 0
     top_repos: list[dict] = field(default_factory=list)
+    extra_contacts: list[str] = field(default_factory=list)  # emails found in bio/blog/etc.
 
     def repos_summary(self, limit: int = 3) -> str:
         parts = []
@@ -159,6 +174,47 @@ class Candidate:
             parts.append(f"{r['full_name']} [{lang}, ★{r.get('stargazers_count', 0)}]"
                          + (f": {desc}" if desc else ""))
         return " | ".join(parts)
+
+
+EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+
+# Placeholder / example domains that are never real contact addresses
+PLACEHOLDER_DOMAINS = ("example.com", "example.net", "example.org", "sentry.io",
+                       "domain.com", "yourdomain.com", "email.com", "test.com")
+
+
+def extract_public_emails(*texts: str) -> list[str]:
+    """Find e-mail addresses that a person has ALREADY published themselves
+    (in their bio, README, website text, etc.). This only reads content the
+    user intentionally made public — nothing private is accessed."""
+    found: list[str] = []
+    for t in texts:
+        if not t:
+            continue
+        for m in EMAIL_RE.findall(t):
+            low = m.lower()
+            # skip noreply / GitHub privacy addresses and placeholder domains
+            if "users.noreply.github.com" in low or "noreply" in low:
+                continue
+            if any(low.endswith("@" + d) for d in PLACEHOLDER_DOMAINS):
+                continue
+            if low not in found:
+                found.append(low)
+    return found
+
+
+def fetch_page_text(client: GitHubClient, url: str, limit: int = 60000) -> str:
+    """Best-effort plain-text fetch of a public web page (for email-in-bio search)."""
+    try:
+        req = Request(url, headers={"User-Agent": "recruit-search/1.0"})
+        with urlopen(req, timeout=10) as resp:
+            ctype = resp.headers.get("Content-Type", "")
+            if "html" not in ctype and "text" not in ctype:
+                return ""
+            body = resp.read(limit).decode("utf-8", errors="replace")
+        return re.sub(r"<[^>]+>", " ", body)  # strip tags
+    except Exception:
+        return ""
 
 
 def build_query(args: argparse.Namespace) -> str:
@@ -192,19 +248,53 @@ def collect(client: GitHubClient, query: str, args: argparse.Namespace) -> list[
             continue
         print(f"[{i}/{len(raw)}] @{login} を取得中...", file=sys.stderr)
         detail = client.get_user(login) or {}
+        bio = detail.get("bio") or ""
+        blog_url = detail.get("blog") or ""
         cand = Candidate(
             login=login,
             name=detail.get("name") or "",
-            email=detail.get("email") or "",  # 公開プロフィールのメールのみ
-            bio=detail.get("bio") or "",
+            email=detail.get("email") or "",  # publicly listed profile e-mail only
+            bio=bio,
             company=detail.get("company") or "",
             location=detail.get("location") or "",
             html_url=detail.get("html_url") or f"https://github.com/{login}",
+            blog=blog_url,
+            twitter=detail.get("twitter_username") or "",
             followers=detail.get("followers", u.get("followers", 0)),
             public_repos=detail.get("public_repos", 0),
         )
         if args.with_repos:
             cand.top_repos = client.list_repos(login, sort="stars", per_page=args.repos_per_user)
+
+        # --- extra contact discovery: ONLY content the user made public ---
+        if not cand.email:
+            # 1) e-mails written in the profile bio itself
+            public_emails = extract_public_emails(bio)
+            if public_emails:
+                cand.email = public_emails[0]
+                cand.extra_contacts = public_emails[1:]
+            # 2) e-mails in the candidate's OWN profile README (username/repo)
+            if args.scan_readmes:
+                own_readme = client.get_readme(f"{login}/{login}")
+                found = extract_public_emails(own_readme)
+                if found:
+                    if not cand.email:
+                        cand.email = found[0]
+                        cand.extra_contacts += found[1:]
+                    else:
+                        cand.extra_contacts += [f for f in found
+                                                if f != cand.email and f not in cand.extra_contacts]
+            # 3) e-mails on their own public personal website
+            if args.scan_websites and blog_url.startswith("http"):
+                page = fetch_page_text(client, blog_url)
+                found = extract_public_emails(page)
+                if found:
+                    if not cand.email:
+                        cand.email = found[0]
+                        cand.extra_contacts += found[1:]
+                    else:
+                        cand.extra_contacts += [f for f in found
+                                                if f != cand.email and f not in cand.extra_contacts]
         candidates.append(cand)
         time.sleep(0.5)  # Core API への過剰アクセス防止
     return candidates
@@ -217,17 +307,22 @@ def write_outputs(candidates: list[Candidate], args: argparse.Namespace) -> None
 
     with open(csv_path, "w", newline="", encoding="utf-8-sig") as f:
         w = csv.writer(f)
-        w.writerow(["username", "login", "public_email", "bio", "company",
-                    "location", "followers", "public_repos", "profile_url", "top_repos"])
+        w.writerow(["username", "login", "public_email", "other_public_emails",
+                    "bio", "company", "location", "website", "twitter",
+                    "followers", "public_repos", "profile_url", "top_repos"])
         for c in candidates:
-            w.writerow([c.name, c.login, c.email, c.bio, c.company,
-                        c.location, c.followers, c.public_repos, c.html_url,
+            w.writerow([c.name, c.login, c.email, "; ".join(c.extra_contacts),
+                        c.bio, c.company,
+                        c.location, c.blog, c.twitter,
+                        c.followers, c.public_repos, c.html_url,
                         c.repos_summary(args.repos_per_user)])
 
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump([{
             "name": c.name, "login": c.login, "public_email": c.email,
+            "other_public_emails": c.extra_contacts,
             "bio": c.bio, "company": c.company, "location": c.location,
+            "website": c.blog, "twitter": c.twitter,
             "followers": c.followers, "public_repos": c.public_repos,
             "profile_url": c.html_url,
             "top_repos": [{"full_name": r["full_name"], "description": r.get("description"),
@@ -239,8 +334,8 @@ def write_outputs(candidates: list[Candidate], args: argparse.Namespace) -> None
     print(f"\n完了: {len(candidates)} 件の候補者を取得しました。")
     print(f"  CSV : {csv_path}")
     print(f"  JSON: {json_path}")
-    print(f"  ※ プロフィールに公開メールを持つ候補: {emails} 名"
-          "（非公開メールの取得は不可能であり対象外です）")
+    print(f"  ※ 公開メールが見つかった候補: {emails} 名"
+          "（プロフィール／バイオ／公開README／本人サイトの公開情報のみ。非公開メールは対象外）")
 
 
 def main() -> None:
@@ -263,6 +358,12 @@ def main() -> None:
     p.add_argument("--no-repos", dest="with_repos", action="store_false",
                    help="リポジトリ情報をスキップ（高速化）")
     p.add_argument("--repos-per-user", type=int, default=3, help="1人あたり取得するリポジトリ数")
+    p.add_argument("--scan-readmes", action="store_true",
+                   help="Also scan the candidate's top public repo READMEs for e-mails "
+                        "they published themselves (slower; extra API calls)")
+    p.add_argument("--scan-websites", action="store_true",
+                   help="Also fetch each candidate's public personal website and look for "
+                        "e-mails they published there (slower)")
     p.add_argument("--output", "-o", default="candidates", help="出力ファイル名のベース（拡張子除く）")
     p.add_argument("--token", default=os.environ.get("GITHUB_TOKEN", ""),
                    help="GitHub パーソナルアクセサントークン（既定: 環境変数 GITHUB_TOKEN）")
