@@ -1,0 +1,62 @@
+[
+  {
+    "name": "mattn",
+    "login": "mattn",
+    "public_email": "",
+    "bio": "Long-time Golang user&contributor, Google Dev Expert for Go, and author of many Go tools, Vim plugin author. Windows hacker C#/Java/C/C++, ex-GitHubStars",
+    "company": "",
+    "location": "Osaka, Japan",
+    "followers": 13528,
+    "public_repos": 2235,
+    "profile_url": "https://github.com/mattn",
+    "top_repos": []
+  },
+  {
+    "name": "Hsiaoming Yang",
+    "login": "lepture",
+    "public_email": "",
+    "bio": "Creator of @authlib and @typlog ",
+    "company": "@hsiaoming ",
+    "location": "Japan",
+    "followers": 8835,
+    "public_repos": 192,
+    "profile_url": "https://github.com/lepture",
+    "top_repos": []
+  },
+  {
+    "name": "Hector Martin",
+    "login": "marcan",
+    "public_email": "",
+    "bio": "If it ain't broke, I'll fix it!",
+    "company": "",
+    "location": "Tokyo, Japan",
+    "followers": 5144,
+    "public_repos": 92,
+    "profile_url": "https://github.com/marcan",
+    "top_repos": []
+  },
+  {
+    "name": "Atsushi Sakai",
+    "login": "AtsushiSakai",
+    "public_email": "",
+    "bio": "An autonomous navigation system engineer, and an OSS developer of #PythonRobotics and #SciPy etc. Japanese web page maintainer of #NumPy",
+    "company": "",
+    "location": "Kanagawa, Japan",
+    "followers": 4884,
+    "public_repos": 211,
+    "profile_url": "https://github.com/AtsushiSakai",
+    "top_repos": []
+  },
+  {
+    "name": "Hajime Hoshi",
+    "login": "hajimehoshi",
+    "public_email": "",
+    "bio": "CTO at Odencat. Author of Ebitengine.",
+    "company": "Odencat",
+    "location": "Tokyo, Japan",
+    "followers": 2524,
+    "public_repos": 164,
+    "profile_url": "https://github.com/hajimehoshi",
+    "top_repos": []
+  }
+]
