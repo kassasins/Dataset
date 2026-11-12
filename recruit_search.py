@@ -4,17 +4,20 @@
 
 GitHub Search API を使った、公開情報のみに基づく技術者検索ツール。
 
-使い方:
-    # 環境変数でトークンを指定（推奨）
-    export GITHUB_TOKEN="ghp_..."        # 個人アクセサントークン（必須）
+使い方 / Usage:
+    # 環境変数でトークンを指定（推奨。anonymous mode also works with lower rate limits）
+    export GITHUB_TOKEN="ghp_..."        # Personal access token (recommended)
 
-    # 検索クエリを直接指定
+    # Search query directly — any language, or ALL languages (omit the language qualifier):
+    python recruit_search.py --query "location:Japan"                    # all languages
     python recruit_search.py --query "location:Japan language:TypeScript"
 
-    # 条件を分けて指定（上記と同じクエリになる）
-    python recruit_search.py --location Japan --language TypeScript --min-followers 10
+    # Conditions as flags. --language accepts ANY number of GitHub-supported languages:
+    python recruit_search.py --location Japan                            # all languages (default)
+    python recruit_search.py --location Japan --language TypeScript Python Go Rust
+    python recruit_search.py --location Japan --language Rust --min-followers 10
 
-    # 出力先・件数を指定
+    # Output base name / page size
     python recruit_search.py --query "location:Japan language:Rust" --per-page 50 -o rust_devs
 
 取得する情報は GitHub の「公開プロフィール」および「公開リポジトリ情報」のみです:
@@ -165,13 +168,17 @@ def build_query(args: argparse.Namespace) -> str:
     if args.location:
         parts.append(f"location:{args.location}")
     if args.language:
-        parts.append(f"language:{args.language}")
+        # --language accepts multiple values (any GitHub-supported language).
+        # One `language:` qualifier per value; users matching ANY of them are returned.
+        for lang in args.language:
+            parts.append(f"language:{lang}")
     if args.min_repos:
         parts.append(f"public_repos:>={args.min_repos}")
     if args.min_followers:
         parts.append(f"followers:>={args.min_followers}")
     if not parts:
-        parts.append("location:Japan language:TypeScript")  # 例示デフォルト
+        # Default: no language filter at all — search every language.
+        parts.append("location:Japan")
     return " ".join(parts)
 
 
@@ -237,10 +244,13 @@ def write_outputs(candidates: list[Candidate], args: argparse.Namespace) -> None
 
 
 def main() -> None:
-    p = argparse.ArgumentParser(description="GitHub 公開プロフィール検索ボット（採用リサーチ用）")
-    p.add_argument("--query", "-q", help="Search API クエリ文字列（例: 'location:Japan language:TypeScript'）")
-    p.add_argument("--location", help="location 条件（例: Japan）")
-    p.add_argument("--language", help="language 条件（例: TypeScript）")
+    p = argparse.ArgumentParser(description="GitHub public-profile search bot (recruiting research). Any language supported.")
+    p.add_argument("--query", "-q", help="Raw Search API query string "
+                 "(e.g. 'location:Japan' for all languages, or 'location:Japan language:TypeScript')")
+    p.add_argument("--location", help="location qualifier (e.g. Japan)")
+    p.add_argument("--language", nargs="*", default=[], metavar="LANG",
+                   help="One or more language qualifiers (any GitHub-supported language), "
+                        "e.g. --language TypeScript Python Go Rust. Omit to search ALL languages.")
     p.add_argument("--min-repos", type=int, default=0, help="公開リポジトリ数の下限")
     p.add_argument("--min-followers", type=int, default=0, help="フォロワー数の下限")
     p.add_argument("--sort", default="followers", choices=["followers", "stars", "repositories", "updated"],

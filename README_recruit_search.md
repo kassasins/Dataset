@@ -18,10 +18,13 @@ GitHub Search API を使い、**公開プロフィールと公開リポジトリ
 ## 使い方
 
 ```bash
-# クエリ文字列を直接指定
+# クエリ文字列を直接指定（language 条件を外すと「全言語」が対象になります）
+python3 recruit_search.py --query "location:Japan"                      # ALL languages
 python3 recruit_search.py --query "location:Japan language:TypeScript"
 
-# 条件を分けて指定
+# 条件を分けて指定。--language は任意の言語を複数指定できます（OR 条件）
+python3 recruit_search.py --location Japan                              # all languages (default)
+python3 recruit_search.py --location Japan --language TypeScript Python Go Rust
 python3 recruit_search.py --location Japan --language TypeScript --min-followers 10
 
 # 件数・出力先・並び順の指定
