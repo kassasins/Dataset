@@ -52,6 +52,18 @@ API_BASE = "https://api.github.com"
 DEFAULT_PER_PAGE = 30
 MAX_PAGES = 10  # Search API は結果の先頭1000件までしか取得できないため
 
+# Free-provider domains the user cares about (gmail / outlook family)
+PERSONAL_MAIL_DOMAINS = (
+    "gmail.com", "googlemail.com",
+    "outlook.com", "hotmail.com", "hotmail.co.jp", "outlook.jp",
+    "live.com", "live.jp", "msn.com", "windowslive.com",
+)
+
+
+def is_personal_mail(email: str) -> bool:
+    low = email.lower()
+    return any(low.endswith("@" + d) or low.endswith("." + d) for d in PERSONAL_MAIL_DOMAINS)
+
 
 # ---------------------------------------------------------------------------
 # GitHub API クライアント（標準ライブラリのみ使用）
@@ -120,6 +132,30 @@ class GitHubClient:
             if len(items) >= total or not batch:
                 break
             time.sleep(2.5)  # Search API: 約30req/min → 安全マージン
+        return items
+
+    def scan_all_pages(self, query: str, per_page: int = 100) -> list[dict]:
+        """Enumerate EVERY match of a user-search query (up to GitHub's hard
+        cap of the first 1,000 results — the Search API cannot go deeper)."""
+        items: list[dict] = []
+        seen: set[str] = set()
+        for page in range(1, MAX_PAGES + 1):
+            qs = urlencode({"q": query, "per_page": per_page, "page": page})
+            data = self._request(f"{API_BASE}/search/users?{qs}")
+            batch = data.get("items", [])
+            total = data.get("total_count", 0)
+            if not batch:
+                break
+            for u in batch:
+                lg = u.get("login", "")
+                if lg and lg not in seen:
+                    seen.add(lg)
+                    items.append(u)
+            print(f"  [full-scan] ページ{page}/10: {len(batch)} 件（総一致 {total} 件、"
+                  f"収集 {len(items)} 件）", file=sys.stderr)
+            if len(items) >= min(total, 1000):
+                break
+            time.sleep(6.5)  # anonymous Search limit is 10 req/min → stay under it
         return items
 
     def get_user(self, login: str) -> Optional[dict]:
@@ -240,7 +276,10 @@ def build_query(args: argparse.Namespace) -> str:
 
 def collect(client: GitHubClient, query: str, args: argparse.Namespace) -> list[Candidate]:
     print(f"検索クエリ: {query!r}", file=sys.stderr)
-    raw = client.search_users(query=query, per_page=args.per_page, max_pages=args.max_pages)
+    if args.full_scan:
+        raw = client.scan_all_pages(query)
+    else:
+        raw = client.search_users(query=query, per_page=args.per_page, max_pages=args.max_pages)
     candidates: list[Candidate] = []
     for i, u in enumerate(raw, 1):
         login = u.get("login", "")
@@ -263,41 +302,97 @@ def collect(client: GitHubClient, query: str, args: argparse.Namespace) -> list[
             followers=detail.get("followers", u.get("followers", 0)),
             public_repos=detail.get("public_repos", 0),
         )
-        if args.with_repos:
+        if args.with_repos and not args.no_detail:
             cand.top_repos = client.list_repos(login, sort="stars", per_page=args.repos_per_user)
 
         # --- extra contact discovery: ONLY content the user made public ---
-        if not cand.email:
-            # 1) e-mails written in the profile bio itself
+        scan_bio = args.scan_readmes or args.full_scan  # full-scan implies cheap text scans
+        scan_site = args.scan_websites or (args.full_scan and bool(blog_url))
+        public_emails: list[str] = []
+        if scan_bio:
             public_emails = extract_public_emails(bio)
-            if public_emails:
+            # prefer a gmail/outlook address if the bio contains several
+            personal = [e for e in public_emails if is_personal_mail(e)]
+            if personal:
+                cand.email = personal[0]
+                public_emails = personal[1:] + [e for e in public_emails if e != cand.email]
+            elif not cand.email and public_emails:
                 cand.email = public_emails[0]
-                cand.extra_contacts = public_emails[1:]
-            # 2) e-mails in the candidate's OWN profile README (username/repo)
-            if args.scan_readmes:
-                own_readme = client.get_readme(f"{login}/{login}")
-                found = extract_public_emails(own_readme)
-                if found:
+                public_emails = public_emails[1:]
+            cand.extra_contacts += public_emails
+        if args.scan_readmes and cand.email and False:
+            pass  # (kept explicit: README scanning below)
+        if args.scan_readmes:
+            own_readme = client.get_readme(f"{login}/{login}")
+            found = extract_public_emails(own_readme)
+            pfound = [f for f in found if is_personal_mail(f)] or found
+            for f in pfound:
+                if f != cand.email and f not in cand.extra_contacts:
                     if not cand.email:
-                        cand.email = found[0]
-                        cand.extra_contacts += found[1:]
+                        cand.email = f
                     else:
-                        cand.extra_contacts += [f for f in found
-                                                if f != cand.email and f not in cand.extra_contacts]
-            # 3) e-mails on their own public personal website
-            if args.scan_websites and blog_url.startswith("http"):
-                page = fetch_page_text(client, blog_url)
-                found = extract_public_emails(page)
-                if found:
+                        cand.extra_contacts.append(f)
+        if scan_site and blog_url.startswith("http"):
+            page = fetch_page_text(client, blog_url)
+            found = extract_public_emails(page)
+            pfound = [f for f in found if is_personal_mail(f)] or found
+            for f in pfound[:2]:
+                if f != cand.email and f not in cand.extra_contacts:
                     if not cand.email:
-                        cand.email = found[0]
-                        cand.extra_contacts += found[1:]
+                        cand.email = f
                     else:
-                        cand.extra_contacts += [f for f in found
-                                                if f != cand.email and f not in cand.extra_contacts]
+                        cand.extra_contacts.append(f)
+        if args.no_detail:
+            # anonymous fast mode: keep only what we can verify from search results
+            pass
         candidates.append(cand)
-        time.sleep(0.5)  # Core API への過剰アクセス防止
+        time.sleep(args.delay)
     return candidates
+
+
+def collect_fullscan_fast(client: GitHubClient, args: argparse.Namespace) -> tuple[list[Candidate], int]:
+    """Full-GitHub enumeration of users whose PUBLICLY LISTED e-mail matches
+    gmail/outlook/hotmail/live domains. Uses the `email:` search qualifier
+    (works only with an authenticated token). Enumerates every match up to
+    GitHub's hard cap of 1,000 results per query."""
+    queries = [f"email:{dom}" for dom in ("@gmail.com", "@outlook.com", "@hotmail.com", "@live.com")]
+    seen: set[str] = set()
+    candidates: list[Candidate] = []
+    total_matches = 0
+    for q in queries:
+        print(f"\n=== フルスキャン: {q!r} ===", file=sys.stderr)
+        try:
+            raw = client.scan_all_pages(q, per_page=100)
+        except SystemExit as e:
+            print(f"  スキップ: {e}", file=sys.stderr)
+            continue
+        # count reported totals (best effort via one extra probe already inside scan)
+        for u in raw:
+            lg = u.get("login", "")
+            if not lg or lg.lower() in seen:
+                continue
+            seen.add(lg.lower())
+            email = (u.get("email") or "").strip().lower() if "email" in u else ""
+            c = Candidate(
+                login=lg,
+                name=u.get("name") or "",
+                email=email,
+                location=u.get("location") or "",
+                html_url=u.get("html_url") or f"https://github.com/{lg}",
+                followers=u.get("followers", 0),
+            )
+            if not c.email:
+                # search index sometimes omits email; fetch the public profile
+                d = client.get_user(lg) or {}
+                c.email = (d.get("email") or "").strip().lower()
+                c.name = c.name or d.get("name") or ""
+                c.location = c.location or d.get("location") or ""
+                c.followers = d.get("followers", c.followers)
+                time.sleep(args.delay)
+            if is_personal_mail(c.email):
+                candidates.append(c)
+        total_matches += len(raw)
+    return candidates, total_matches
 
 
 def write_outputs(candidates: list[Candidate], args: argparse.Namespace) -> None:
@@ -364,6 +459,21 @@ def main() -> None:
     p.add_argument("--scan-websites", action="store_true",
                    help="Also fetch each candidate's public personal website and look for "
                         "e-mails they published there (slower)")
+    p.add_argument("--full-scan", action="store_true",
+                   help="Enumerate EVERY match of the query (all 10 pages, up to GitHub's "
+                        "hard cap of 1,000 results) instead of just the first page")
+    p.add_argument("--all-github", action="store_true",
+                   help="Search ALL of GitHub (not just one location) for users whose "
+                        "PUBLICLY LISTED e-mail is @gmail/@outlook/@hotmail/@live. "
+                        "Requires GITHUB_TOKEN (the email: qualifier needs auth).")
+    p.add_argument("--gmail-outlook-only", action="store_true",
+                   help="Keep only candidates with a gmail.com / outlook.com family "
+                        "(hotmail/live/outlook.jp) public e-mail in the final output")
+    p.add_argument("--no-detail", action="store_true",
+                   help="Skip per-user profile/repo lookups (avoids the Core API limit; "
+                        "use when running anonymously over many users)")
+    p.add_argument("--delay", type=float, default=0.5,
+                   help="Seconds to sleep between per-user API calls (default 0.5)")
     p.add_argument("--output", "-o", default="candidates", help="出力ファイル名のベース（拡張子除く）")
     p.add_argument("--token", default=os.environ.get("GITHUB_TOKEN", ""),
                    help="GitHub パーソナルアクセサントークン（既定: 環境変数 GITHUB_TOKEN）")
@@ -380,12 +490,42 @@ def main() -> None:
     args.max_pages = min(args.max_pages, MAX_PAGES)
 
     client = GitHubClient(token=args.token)
-    query = build_query(args)
-    q = f"{query} sort:{args.sort} order:{args.order}" if args.sort != "followers" else query
-    candidates = collect(client, q, args)
+
+    # ---- mode 1: whole-GitHub enumeration by publicly-listed e-mail domain ----
+    if args.all_github:
+        if not args.token:
+            raise SystemExit(
+                "エラー: --all-github は `email:` サーチ修飾子を使うため認証トークンが必須です。\n"
+                "       export GITHUB_TOKEN=\"ghp_...\" を設定して再実行してください。"
+                "（匿名モードでは email: 修飾子は使えません）")
+        candidates, scanned = collect_fullscan_fast(client, args)
+        args.gmail_outlook_only = True
+    else:
+        query = build_query(args)
+        q = f"{query} sort:{args.sort} order:{args.order}" if args.sort != "followers" else query
+        candidates = collect(client, q, args)
+
     if not candidates:
         print("該当する候補者がいませんでした。クエリ条件を見直してください。")
         return
+
+    # ---- optional filter: keep only gmail/outlook-family addresses ----
+    if args.gmail_outlook_only:
+        before = len(candidates)
+        filtered = []
+        for c in candidates:
+            all_mails = [c.email] + c.extra_contacts
+            personal = [m for m in all_mails if is_personal_mail(m)]
+            if personal:
+                if not is_personal_mail(c.email):
+                    c.extra_contacts = [m for m in c.extra_contacts if m != personal[0]]
+                    c.email = personal[0]
+                else:
+                    c.extra_contacts = [m for m in c.extra_contacts if is_personal_mail(m)]
+                filtered.append(c)
+        candidates = filtered
+        print(f"\n[gmail/outlook フィルタ] {before} 件中 {len(candidates)} 件に残しました。")
+
     write_outputs(candidates, args)
 
 
