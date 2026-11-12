@@ -62,7 +62,8 @@ class GitHubClient:
         req = Request(
             url,
             headers={
-                "Authorization": f"Bearer {self.token}",
+                # トークン未指定時は匿名リクエスト（Read API 60 req/h、Search 10 req/min）
+                **({"Authorization": f"Bearer {self.token}"} if self.token else {}),
                 "Accept": "application/vnd.github+json",
                 "X-GitHub-Api-Version": "2022-11-28",
                 "User-Agent": "recruit-search-bot",
@@ -258,10 +259,12 @@ def main() -> None:
     args = p.parse_args()
 
     if not args.token:
-        raise SystemExit(
-            "エラー: トークンがありません。\n"
-            "  export GITHUB_TOKEN=\"ghp_...\" を設定するか、--token で指定してください。\n"
-            "  （Search API は 2023 年以降、認証済みトークンが必須です）"
+        # トークンなしでも匿名で実行可能（Search 10 req/min, Read 60 req/h の制限あり）
+        print(
+            "ヒント: GITHUB_TOKEN が未設定のため匿名モードで実行します"
+            "（Search 10 req/min・Read 60 req/h に制限されます）。"
+            "大量取得は export GITHUB_TOKEN=\"ghp_...\" を推奨します。",
+            file=sys.stderr,
         )
     args.max_pages = min(args.max_pages, MAX_PAGES)
 

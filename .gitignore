@@ -1,1 +1,3 @@
 __pycache__/
+candidates*.csv
+candidates*.json

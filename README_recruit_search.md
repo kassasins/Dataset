@@ -5,12 +5,15 @@ GitHub Search API を使い、**公開プロフィールと公開リポジトリ
 
 ## セットアップ
 
-1. [GitHub でパーソナルアクセサントークン (PAT) を作成](https://github.com/settings/tokens)
+1. （推奨）[GitHub でパーソナルアクセサントークン (PAT) を作成](https://github.com/settings/tokens)
    （権限なしの public-only トークンで十分です）
 2. 環境変数を設定:
    ```bash
    export GITHUB_TOKEN="ghp_xxxxxxxx"
    ```
+
+> **トークンなしでも実行可能**（匿名モード）。ただし Search API 10 req/min・
+> Read API 60 req/h に制限されるため、大量取得や定期実行には PAT の設定を推奨します。
 
 ## 使い方
 
