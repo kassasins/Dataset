@@ -1,0 +1,932 @@
+[
+  {
+    "name": "Anthony Fu",
+    "login": "antfu",
+    "public_email": "",
+    "bio": "A ship in harbor is safe, but that is not what ships are built for.",
+    "company": "@vercel | @nuxt",
+    "location": "Gifu, Japan",
+    "followers": 40775,
+    "public_repos": 406,
+    "profile_url": "https://github.com/antfu",
+    "top_repos": [
+      {
+        "full_name": "antfu/devbox",
+        "description": null,
+        "language": "TypeScript",
+        "stars": 4
+      },
+      {
+        "full_name": "antfu/dev-container",
+        "description": "Run any agent, orchestrator or command in a network-caged container whose tokens never enter it.",
+        "language": "TypeScript",
+        "stars": 6
+      },
+      {
+        "full_name": "antfu/furifont",
+        "description": "A Japanese font that shows furigana by itself.",
+        "language": "TypeScript",
+        "stars": 432
+      }
+    ]
+  },
+  {
+    "name": "Keijiro Takahashi",
+    "login": "keijiro",
+    "public_email": "",
+    "bio": "",
+    "company": "Unity Technologies Japan",
+    "location": "Japan",
+    "followers": 23965,
+    "public_repos": 949,
+    "profile_url": "https://github.com/keijiro",
+    "top_repos": [
+      {
+        "full_name": "keijiro/unity-office-clock",
+        "description": "macOS widget showing the time in Unity's main offices",
+        "language": "Swift",
+        "stars": 0
+      },
+      {
+        "full_name": "keijiro/aic-deck",
+        "description": null,
+        "language": "Vue",
+        "stars": 0
+      },
+      {
+        "full_name": "keijiro/gencli-football",
+        "description": null,
+        "language": "C#",
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "kenji",
+    "login": "kenjinote",
+    "public_email": "",
+    "bio": "I like Win32API, Assembly, C++ and Cryptography. Exploring Quantum Computing. Microsoft MVP Since 2017 - 2026🐳",
+    "company": "",
+    "location": "Japan",
+    "followers": 23558,
+    "public_repos": 679,
+    "profile_url": "https://github.com/kenjinote",
+    "top_repos": [
+      {
+        "full_name": "kenjinote/RSA-270",
+        "description": null,
+        "language": "C++",
+        "stars": 3
+      },
+      {
+        "full_name": "kenjinote/X-Following-Filter",
+        "description": null,
+        "language": "JavaScript",
+        "stars": 5
+      },
+      {
+        "full_name": "kenjinote/chat.exe",
+        "description": "chat.exeのWebページ",
+        "language": "HTML",
+        "stars": 4
+      }
+    ]
+  },
+  {
+    "name": "Wei Wang",
+    "login": "onevcat",
+    "public_email": "",
+    "bio": "A creator creating for creators: thinking, building, evolving.",
+    "company": "LINE Corp.",
+    "location": "Yokohama, Japan / China",
+    "followers": 15889,
+    "public_repos": 264,
+    "profile_url": "https://github.com/onevcat",
+    "top_repos": [
+      {
+        "full_name": "onevcat/actions",
+        "description": "A collection of GitHub Actions to accelerate your Gradle Builds on GitHub",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "onevcat/NestedHostingViewRepro",
+        "description": "Minimal macOS repro: an NSHostingView nested in an NSViewRepresentable calls makeNSView again after it is dismantled",
+        "language": "Swift",
+        "stars": 0
+      },
+      {
+        "full_name": "onevcat/pi-extensions",
+        "description": "Pi extensions by onevcat. Independent packages for configurable Codex quotas and future extensions.",
+        "language": "TypeScript",
+        "stars": 5
+      }
+    ]
+  },
+  {
+    "name": "mattn",
+    "login": "mattn",
+    "public_email": "",
+    "bio": "Long-time Golang user&contributor, Google Dev Expert for Go, and author of many Go tools, Vim plugin author. Windows hacker C#/Java/C/C++, ex-GitHubStars",
+    "company": "",
+    "location": "Osaka, Japan",
+    "followers": 13528,
+    "public_repos": 2235,
+    "profile_url": "https://github.com/mattn",
+    "top_repos": [
+      {
+        "full_name": "mattn/gleam-nostr-relay",
+        "description": "A Nostr relay server written in Gleam",
+        "language": "Gleam",
+        "stars": 0
+      },
+      {
+        "full_name": "mattn/gramps",
+        "description": null,
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "mattn/nostr-relay-speed",
+        "description": "Measure Nostr relay connect and query latency from your own browser",
+        "language": "HTML",
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "Takuya Matsuyama",
+    "login": "craftzdog",
+    "public_email": "",
+    "bio": "Digital crafts(man|dog)\r\n\r\n╥━━━━━━━━╭━━╮━━┳ ╢╭╮╭━━━━━┫┃▋▋━▅┣ ╢┃╰┫┈┈┈┈┈┃┃┈┈╰┫┣ ╢╰━┫┈┈┈┈┈╰╯╰┳━╯┣ ╢┊┊┃┏┳┳━━┓┏┳┫┊┊┣ ╨━━┗┛┗┛━━┗┛┗┛━━┻",
+    "company": "Freelancer",
+    "location": "Osaka, Japan",
+    "followers": 11799,
+    "public_repos": 171,
+    "profile_url": "https://github.com/craftzdog",
+    "top_repos": [
+      {
+        "full_name": "craftzdog/herdr",
+        "description": "the runtime your coding agents live on",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "craftzdog/nitro",
+        "description": "🔥 Insanely fast native C++, Swift or Kotlin modules with a statically compiled binding layer to JSI",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "craftzdog/op-s2",
+        "description": "Hardware Backed Encryption for React Native by @ospfranco",
+        "language": null,
+        "stars": 1
+      }
+    ]
+  },
+  {
+    "name": "Y11",
+    "login": "XiaomingX",
+    "public_email": "",
+    "bio": "Software Dev @ X | Linux, Java, Spring, Python, Golang, Next.js | Open Source Enthusiast | LLM Innovator | M.Sc. in Software Engineering 🚀",
+    "company": "Jobleap.cn",
+    "location": "Japan",
+    "followers": 11316,
+    "public_repos": 67,
+    "profile_url": "https://github.com/XiaomingX",
+    "top_repos": [
+      {
+        "full_name": "XiaomingX/awesome-rk3588",
+        "description": "Awesome RK3588 — curated index of Rockchip RK3588/RK3588S resources: boards, communities, OS images, mainline kernel, NPU/AI (RKNN/RKLLM), multimedia, UEFI & tooling. 瑞芯微 RK3588 生态资源大全.",
+        "language": null,
+        "stars": 9
+      },
+      {
+        "full_name": "XiaomingX/ego-oscar-v2",
+        "description": "Open hardware and capture software for the Ego-OSCAR stereo-inertial egocentric camera",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "XiaomingX/awesome-security-bounty",
+        "description": "A curated list of influential bug bounty & vulnerability disclosure programs in China and worldwide — international platforms, vendor SRCs, Web3, and Chinese SRCs.",
+        "language": null,
+        "stars": 5
+      }
+    ]
+  },
+  {
+    "name": "Yukihiro \"Matz\" Matsumoto",
+    "login": "matz",
+    "public_email": "",
+    "bio": "",
+    "company": "Ruby Association,NaCl",
+    "location": "Matsue, Japan",
+    "followers": 10759,
+    "public_repos": 16,
+    "profile_url": "https://github.com/matz",
+    "top_repos": [
+      {
+        "full_name": "matz/rabbit",
+        "description": "A programmable presentation tool by Ruby.",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "matz/karukan",
+        "description": "Japanese Input Method System for Linux, macOS, Neural Kana-Kanji Conversion Engine",
+        "language": null,
+        "stars": 1
+      },
+      {
+        "full_name": "matz/spin-index",
+        "description": "The spinelgems index: a git-hosted name -> (repo, releases) map for spin (no server)",
+        "language": null,
+        "stars": 5
+      }
+    ]
+  },
+  {
+    "name": "Denny Britz",
+    "login": "dennybritz",
+    "public_email": "",
+    "bio": "",
+    "company": "",
+    "location": "Tokyo, Japan",
+    "followers": 9848,
+    "public_repos": 62,
+    "profile_url": "https://github.com/dennybritz",
+    "top_repos": [
+      {
+        "full_name": "dennybritz/agent-bridge",
+        "description": null,
+        "language": "Rust",
+        "stars": 1
+      },
+      {
+        "full_name": "dennybritz/arrow-datafusion",
+        "description": "Apache Arrow DataFusion SQL Query Engine",
+        "language": "Rust",
+        "stars": 0
+      },
+      {
+        "full_name": "dennybritz/probability-monads",
+        "description": null,
+        "language": "Haskell",
+        "stars": 10
+      }
+    ]
+  },
+  {
+    "name": "Daichi Furiya",
+    "login": "wasabeef",
+    "public_email": "",
+    "bio": "Google Developers Expert for Android",
+    "company": "CyberAgent, Inc.",
+    "location": "Tokyo, Japan",
+    "followers": 9718,
+    "public_repos": 65,
+    "profile_url": "https://github.com/wasabeef",
+    "top_repos": [
+      {
+        "full_name": "wasabeef/emu-for-claude-mods",
+        "description": "Start, stop and monitor iOS simulators and Android emulators from Claude Code",
+        "language": "TypeScript",
+        "stars": 0
+      },
+      {
+        "full_name": "wasabeef/notion-page-format-worker",
+        "description": "Create a Notion Worker that formats Notion pages with safe, configurable Markdown rules.",
+        "language": "TypeScript",
+        "stars": 0
+      },
+      {
+        "full_name": "wasabeef/notion-auto-lock-worker",
+        "description": "Create a Notion Worker that automatically locks stale pages after a configurable delay.",
+        "language": "TypeScript",
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "Hsiaoming Yang",
+    "login": "lepture",
+    "public_email": "",
+    "bio": "Creator of @authlib and @typlog ",
+    "company": "@hsiaoming ",
+    "location": "Japan",
+    "followers": 8835,
+    "public_repos": 192,
+    "profile_url": "https://github.com/lepture",
+    "top_repos": [
+      {
+        "full_name": "lepture/blombooru",
+        "description": "A modern self-hosted personal booru for organizing and tagging private image collections. Docker-ready and simple to set up.",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "lepture/Photon",
+        "description": "Garry's Mod Lighting Engine",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "lepture/emscripten",
+        "description": "Emscripten: An LLVM-to-WebAssembly Compiler",
+        "language": null,
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "Drakeet",
+    "login": "drakeet",
+    "public_email": "",
+    "bio": "",
+    "company": "",
+    "location": "Kyoto, Japan",
+    "followers": 8010,
+    "public_repos": 22,
+    "profile_url": "https://github.com/drakeet",
+    "top_repos": [
+      {
+        "full_name": "drakeet/7-Zip-JBinding-4Android",
+        "description": "Android Java wrapper for 7z archiver engine",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "drakeet/sevenzipjbinding",
+        "description": "7-Zip-JBinding",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "drakeet/GRDB.swift",
+        "description": "A toolkit for SQLite databases, with a focus on application development",
+        "language": null,
+        "stars": 1
+      }
+    ]
+  },
+  {
+    "name": "Cheng",
+    "login": "zcbenz",
+    "public_email": "",
+    "bio": "creator of Electron, maintainer of MLX",
+    "company": "Apple",
+    "location": "Japan",
+    "followers": 7976,
+    "public_repos": 39,
+    "profile_url": "https://github.com/zcbenz",
+    "top_repos": [
+      {
+        "full_name": "zcbenz/qmm",
+        "description": null,
+        "language": "Cuda",
+        "stars": 0
+      },
+      {
+        "full_name": "zcbenz/b-is-branch",
+        "description": "CLI tool for switching/deleting git branches.",
+        "language": "JavaScript",
+        "stars": 5
+      },
+      {
+        "full_name": "zcbenz/cudnn-frontend",
+        "description": "cudnn_frontend provides a c++ wrapper for the cudnn backend API and samples on how to use it",
+        "language": null,
+        "stars": 1
+      }
+    ]
+  },
+  {
+    "name": "Guo Yu",
+    "login": "guo-yu",
+    "public_email": "",
+    "bio": "Retired. live in Tokyo & Azumino & Miyakojima at this moment. ex-senior principal engineer at Bytedance. Founder of @chekusu & @codefordao",
+    "company": "Retired",
+    "location": "Tokyo, Japan",
+    "followers": 6613,
+    "public_repos": 215,
+    "profile_url": "https://github.com/guo-yu",
+    "top_repos": [
+      {
+        "full_name": "guo-yu/tenki-3d",
+        "description": "3D weather visualization for Japanese cities with custom GLSL shaders",
+        "language": "HTML",
+        "stars": 1
+      },
+      {
+        "full_name": "guo-yu/rhythm-master",
+        "description": "🎵 Browser-based rhythm game with Web Audio API beat detection. Upload any song and play!",
+        "language": "HTML",
+        "stars": 3
+      },
+      {
+        "full_name": "guo-yu/minimal-personal-blog",
+        "description": "一个简洁现代的个人博客 HTML 页面模板 | A minimal modern personal blog HTML template",
+        "language": "HTML",
+        "stars": 1
+      }
+    ]
+  },
+  {
+    "name": "manman4",
+    "login": "manman4",
+    "public_email": "",
+    "bio": "Editor-in-Chief, On-Line Encyclopedia of Integer Sequences (OEIS).",
+    "company": "",
+    "location": "Japan",
+    "followers": 5796,
+    "public_repos": 40,
+    "profile_url": "https://github.com/manman4",
+    "top_repos": [
+      {
+        "full_name": "manman4/mathlib4",
+        "description": "The math library of Lean 4",
+        "language": "Lean",
+        "stars": 3
+      },
+      {
+        "full_name": "manman4/erdosproblems",
+        "description": "A community database for the problems on the erdosproblems.com site",
+        "language": "Python",
+        "stars": 4
+      },
+      {
+        "full_name": "manman4/LeanMathAtlas",
+        "description": "A learner-oriented mathematics atlas formalized in Lean.",
+        "language": "Lean",
+        "stars": 5
+      }
+    ]
+  },
+  {
+    "name": "Domenic Denicola",
+    "login": "domenic",
+    "public_email": "",
+    "bio": "",
+    "company": "",
+    "location": "Tokyo, Japan",
+    "followers": 5642,
+    "public_repos": 100,
+    "profile_url": "https://github.com/domenic",
+    "top_repos": [
+      {
+        "full_name": "domenic/node",
+        "description": "Node.js JavaScript runtime ✨🐢🚀✨",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "domenic/spec-ai",
+        "description": "AI tooling for working with WHATWG standards",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "domenic/dom",
+        "description": "DOM Standard",
+        "language": null,
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "Dean Herbert",
+    "login": "peppy",
+    "public_email": "",
+    "bio": "(๑・ω・๑)",
+    "company": "@ppy ",
+    "location": "Japan",
+    "followers": 5247,
+    "public_repos": 89,
+    "profile_url": "https://github.com/peppy",
+    "top_repos": [
+      {
+        "full_name": "peppy/osu-server-beatmap-submission",
+        "description": null,
+        "language": "C#",
+        "stars": 0
+      },
+      {
+        "full_name": "peppy/ruleset-typer",
+        "description": null,
+        "language": "C#",
+        "stars": 28
+      },
+      {
+        "full_name": "peppy/nowplaying-cli",
+        "description": "macOS command-line utility for retrieving currently playing media ",
+        "language": "Objective-C++",
+        "stars": 1
+      }
+    ]
+  },
+  {
+    "name": "Hector Martin",
+    "login": "marcan",
+    "public_email": "",
+    "bio": "If it ain't broke, I'll fix it!",
+    "company": "",
+    "location": "Tokyo, Japan",
+    "followers": 5144,
+    "public_repos": 92,
+    "profile_url": "https://github.com/marcan",
+    "top_repos": [
+      {
+        "full_name": "marcan/autorestic",
+        "description": "Config driven, easy backup cli for restic.",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "marcan/homeassistant",
+        "description": ":house_with_garden: Open source home automation that puts local control and privacy first.",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "marcan/SmartIR",
+        "description": "Home Assistant integration to manage climate systems, TVs, fans and lights using IR/RF controllers. Compatible with Broadlink, Xiaomi, MQTT, LOOKin and ESPHome",
+        "language": "Python",
+        "stars": 2
+      }
+    ]
+  },
+  {
+    "name": "Shougo",
+    "login": "Shougo",
+    "public_email": "",
+    "bio": "The text editor is the world.",
+    "company": "",
+    "location": "Japan",
+    "followers": 5017,
+    "public_repos": 214,
+    "profile_url": "https://github.com/Shougo",
+    "top_repos": [
+      {
+        "full_name": "Shougo/ng",
+        "description": "New minimal Neovim GUI client written in Go",
+        "language": "Go",
+        "stars": 0
+      },
+      {
+        "full_name": "Shougo/goda-cmp-ui-native.vim",
+        "description": "Native UI for goda-cmp.vim",
+        "language": "Vim Script",
+        "stars": 0
+      },
+      {
+        "full_name": "Shougo/goda-cmp-ui-pum.vim",
+        "description": "Pum.vim UI for goda-cmp.vim",
+        "language": "Go",
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "Atsushi Sakai",
+    "login": "AtsushiSakai",
+    "public_email": "",
+    "bio": "An autonomous navigation system engineer, and an OSS developer of #PythonRobotics and #SciPy etc. Japanese web page maintainer of #NumPy",
+    "company": "",
+    "location": "Kanagawa, Japan",
+    "followers": 4884,
+    "public_repos": 211,
+    "profile_url": "https://github.com/AtsushiSakai",
+    "top_repos": [
+      {
+        "full_name": "AtsushiSakai/Maitake",
+        "description": "動画をアップロードせず、ブラウザ内でMP4・MOV・AVI・WebMへ変換するWebアプリ",
+        "language": "JavaScript",
+        "stars": 0
+      },
+      {
+        "full_name": "AtsushiSakai/Enoki",
+        "description": "Private, browser-based Japanese input with on-device kanji conversion, emoji search, and offline support.",
+        "language": "JavaScript",
+        "stars": 0
+      },
+      {
+        "full_name": "AtsushiSakai/PlotJuggler",
+        "description": "The Time Series Visualization Tool that you deserve.",
+        "language": null,
+        "stars": 2
+      }
+    ]
+  },
+  {
+    "name": "kazuya kawaguchi",
+    "login": "kazupon",
+    "public_email": "",
+    "bio": "software engineer, @vuejs core team member, vite+ team member, creator of gunshi, @intlify & i18n enthusiast, vue fes japan & @vuejs-jp organizer, and wasm love",
+    "company": "PLAID, inc",
+    "location": "Tokyo, Japan",
+    "followers": 4372,
+    "public_repos": 354,
+    "profile_url": "https://github.com/kazupon",
+    "top_repos": [
+      {
+        "full_name": "kazupon/cli-usage-error-exit-codes",
+        "description": null,
+        "language": "JavaScript",
+        "stars": 0
+      },
+      {
+        "full_name": "kazupon/npmx.dev",
+        "description": "a fast, modern browser for the npm registry",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "kazupon/vrowzer-repro-issue-28",
+        "description": "Minimal repro: Vrowzer SW answers cross-origin fetches (CORP/CORS after Hono 404 fallback)",
+        "language": "JavaScript",
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "Yoshifumi Kawai",
+    "login": "neuecc",
+    "public_email": "",
+    "bio": "Founder/CEO/CTO of Cysharp, Inc. Microsoft MVP for Visual C# since 2011",
+    "company": "@Cysharp",
+    "location": "Tokyo, Japan",
+    "followers": 4144,
+    "public_repos": 60,
+    "profile_url": "https://github.com/neuecc",
+    "top_repos": [
+      {
+        "full_name": "neuecc/toon",
+        "description": "🎒 Token-Oriented Object Notation (TOON) – Compact, human-readable, schema-aware JSON for LLM prompts. Spec, benchmarks, TypeScript SDK.",
+        "language": "TypeScript",
+        "stars": 2
+      },
+      {
+        "full_name": "neuecc/BenchmarkDotNet",
+        "description": "Powerful .NET library for benchmarking",
+        "language": "C#",
+        "stars": 0
+      },
+      {
+        "full_name": "neuecc/NuGetForUnity",
+        "description": "A NuGet Package Manager for Unity",
+        "language": "C#",
+        "stars": 1
+      }
+    ]
+  },
+  {
+    "name": "Yusuke Wada",
+    "login": "yusukebe",
+    "public_email": "",
+    "bio": "Developer Advocate @cloudflare @voidzero-dev  Creator of @honojs ",
+    "company": "@cloudflare @voidzero-dev",
+    "location": "Yokohama, Japan",
+    "followers": 4120,
+    "public_repos": 378,
+    "profile_url": "https://github.com/yusukebe",
+    "top_repos": [
+      {
+        "full_name": "yusukebe/void-hono-jsx",
+        "description": null,
+        "language": "TypeScript",
+        "stars": 0
+      },
+      {
+        "full_name": "yusukebe/hono-void-minimal",
+        "description": null,
+        "language": "TypeScript",
+        "stars": 4
+      },
+      {
+        "full_name": "yusukebe/my-jev-router-app",
+        "description": null,
+        "language": "TypeScript",
+        "stars": 1
+      }
+    ]
+  },
+  {
+    "name": "Sebastian Tschan",
+    "login": "blueimp",
+    "public_email": "",
+    "bio": "🍌banana banana banana",
+    "company": "blueimp.net",
+    "location": "Tokyo, Japan",
+    "followers": 4067,
+    "public_repos": 35,
+    "profile_url": "https://github.com/blueimp",
+    "top_repos": [
+      {
+        "full_name": "blueimp/playwright-example",
+        "description": "Example setup for the Playwright end-to-end testing framework. Includes an example email application with file attachment support and tests to cover its functionality.",
+        "language": "TypeScript",
+        "stars": 13
+      },
+      {
+        "full_name": "blueimp/mocha-chrome-npm",
+        "description": ":coffee: Run Mocha tests using headless Google Chrome",
+        "language": "JavaScript",
+        "stars": 0
+      },
+      {
+        "full_name": "blueimp/mocha-chrome",
+        "description": "mocha-chrome Dockerfile",
+        "language": "Shell",
+        "stars": 3
+      }
+    ]
+  },
+  {
+    "name": "Hiroki Osame",
+    "login": "privatenumber",
+    "public_email": "",
+    "bio": "I'm on a mission to open source my solutions 🚀",
+    "company": "",
+    "location": "Tokyo, Japan",
+    "followers": 3980,
+    "public_repos": 160,
+    "profile_url": "https://github.com/privatenumber",
+    "top_repos": [
+      {
+        "full_name": "privatenumber/opencode",
+        "description": "The open source coding agent.",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "privatenumber/yomitoku",
+        "description": "YomiTokuはAIを活用した日本語文書解析エンジンを提供するPythonパッケージです。 Yomitoku is an AI-powered document image analysis package designed specifically for the Japanese language.",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "privatenumber/eslint-plugin-arrow",
+        "description": "Lint rules that convert functions to arrow functions and declare them before use, with precise autofixes that keep your formatting. Works with ESLint and Oxlint.",
+        "language": "TypeScript",
+        "stars": 2
+      }
+    ]
+  },
+  {
+    "name": "Kevin",
+    "login": "kevinzhow",
+    "public_email": "",
+    "bio": "Code Design and Crafts",
+    "company": "",
+    "location": "Koshigaya, Japan",
+    "followers": 3915,
+    "public_repos": 118,
+    "profile_url": "https://github.com/kevinzhow",
+    "top_repos": [
+      {
+        "full_name": "kevinzhow/raft-server-swift",
+        "description": null,
+        "language": "Swift",
+        "stars": 0
+      },
+      {
+        "full_name": "kevinzhow/linux-server-hardening-skill",
+        "description": "Keep unattended Linux servers online: crash recovery, sleep prevention, boot safeguards, and Wi-Fi stability checks.",
+        "language": "Python",
+        "stars": 0
+      },
+      {
+        "full_name": "kevinzhow/magpie",
+        "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
+        "language": null,
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "Yuji Ueki",
+    "login": "unhappychoice",
+    "public_email": "",
+    "bio": "\r\n    ＼ Software Engineer ／\r\n\r\n",
+    "company": "",
+    "location": "Tokyo, Japan",
+    "followers": 3727,
+    "public_repos": 56,
+    "profile_url": "https://github.com/unhappychoice",
+    "top_repos": [
+      {
+        "full_name": "unhappychoice/mirage-ecs",
+        "description": "mirage (github.com/acidlemon/mirage) for Amazon ECS",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "unhappychoice/tapline",
+        "description": "A simple 4-lane rhythm game in your terminal",
+        "language": "Rust",
+        "stars": 3
+      },
+      {
+        "full_name": "unhappychoice/winget-pkgs",
+        "description": "The Microsoft community Windows Package Manager manifest repository",
+        "language": null,
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "Cysharp, Inc.",
+    "login": "Cysharp",
+    "public_email": "",
+    "bio": "Cysharp is a subsidiary of Cygames, that is focusing C# both .NET and Unity.",
+    "company": "",
+    "location": "Tokyo, Japan",
+    "followers": 3717,
+    "public_repos": 50,
+    "profile_url": "https://github.com/Cysharp",
+    "top_repos": [
+      {
+        "full_name": "Cysharp/Preferis",
+        "description": "A cross-platform browser switcher that opens URLs based on rules.",
+        "language": "C#",
+        "stars": 14
+      },
+      {
+        "full_name": "Cysharp/RingController",
+        "description": "Customize ring behavior everywhere for Leica Leitzphone powered by Xiaomi(Xiaomi 17 Ultra by Leica)",
+        "language": "C#",
+        "stars": 6
+      },
+      {
+        "full_name": "Cysharp/SerializerFoundation",
+        "description": "High performance serialization infrastructure for C#.",
+        "language": "C#",
+        "stars": 108
+      }
+    ]
+  },
+  {
+    "name": "Shuichi Tsutsumi",
+    "login": "shu223",
+    "public_email": "",
+    "bio": "Freelance iOS Programmer",
+    "company": "",
+    "location": "Tokyo, Japan",
+    "followers": 3529,
+    "public_repos": 78,
+    "profile_url": "https://github.com/shu223",
+    "top_repos": [
+      {
+        "full_name": "shu223/inkdrop-alfred-workflow",
+        "description": "A simple Alfred workflow for Inkdrop",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "shu223/vibetunnel",
+        "description": "Turn any browser into your terminal & command your agents on the go.",
+        "language": null,
+        "stars": 1
+      },
+      {
+        "full_name": "shu223/llama.cpp",
+        "description": "LLM inference in C/C++",
+        "language": null,
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "Taro Yamada",
+    "login": "TaroYamada08",
+    "public_email": "",
+    "bio": "Full Stack Engineer | Security Researcher | Reverse Engineering | Ethical Hacking 🔝⭐⭐⭐⭐⭐",
+    "company": "Open to work",
+    "location": "Tokyo, Japan",
+    "followers": 3462,
+    "public_repos": 193,
+    "profile_url": "https://github.com/TaroYamada08",
+    "top_repos": [
+      {
+        "full_name": "TaroYamada08/crypto-arbitrage",
+        "description": "Crypto arbitrage trading bot that detects triangular and cross-exchange opportunities, executes trades automatically, and includes backtested strategies with high historical returns.",
+        "language": "Python",
+        "stars": 1
+      },
+      {
+        "full_name": "TaroYamada08/solana-sniper-copy-trading-bot",
+        "description": "Ultra-fast Solana trading bot (Node.js & Rust) for copy trading, sniping, and MEV, with low-latency execution and advanced sell logic for high-volatility markets.",
+        "language": "Rust",
+        "stars": 1
+      },
+      {
+        "full_name": "TaroYamada08/instagram-auto-create-account",
+        "description": "An automatic account creation bot script for Instagram.",
+        "language": "Python",
+        "stars": 1
+      }
+    ]
+  }
+]

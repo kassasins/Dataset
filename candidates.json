@@ -1,0 +1,895 @@
+[
+  {
+    "name": "Takashi Hagiwara",
+    "login": "ClaerDev",
+    "public_email": "",
+    "bio": "Senior AI Engineer — LLM Post-Training & MLOps Infrastructure & Applied AI Engineering.",
+    "company": "",
+    "location": "Japan",
+    "followers": 2250,
+    "public_repos": 14,
+    "profile_url": "https://github.com/ClaerDev",
+    "top_repos": [
+      {
+        "full_name": "ClaerDev/My-Portfolio",
+        "description": "AI & Full-stack engineer (Takumi Shimizu)",
+        "language": "TypeScript",
+        "stars": 3
+      },
+      {
+        "full_name": "ClaerDev/Mindforge",
+        "description": "Turn your photos into professional-grade portraits with MindForge. Whether you need a sharp LinkedIn headshot or a polished personal photo, MindForge makes it simple. Upload your images, train your AI model, and create stunning results in minutes.",
+        "language": "TypeScript",
+        "stars": 3
+      },
+      {
+        "full_name": "ClaerDev/coode",
+        "description": "Coode is a portfolio project: a full-stack online course platform built with Next.js 15, React 19, Shadcn, Stripe, Drizzle ORM, and Postgres.",
+        "language": "TypeScript",
+        "stars": 3
+      }
+    ]
+  },
+  {
+    "name": "Suguru Inatomi",
+    "login": "lacolaco",
+    "public_email": "",
+    "bio": "Google Developers Expert for Angular\r\nTrust me, I'm a programmer.",
+    "company": "",
+    "location": "Tokyo, Japan",
+    "followers": 718,
+    "public_repos": 217,
+    "profile_url": "https://github.com/lacolaco",
+    "top_repos": [
+      {
+        "full_name": "lacolaco/angular-error-boundary-example",
+        "description": null,
+        "language": "TypeScript",
+        "stars": 1
+      },
+      {
+        "full_name": "lacolaco/angular-router-resources-sandbox",
+        "description": null,
+        "language": "TypeScript",
+        "stars": 1
+      },
+      {
+        "full_name": "lacolaco/stoic-angular",
+        "description": "ESLint plugin that enforces strict design constraints on Angular projects",
+        "language": "TypeScript",
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "Dev Protocol",
+    "login": "dev-protocol",
+    "public_email": "hi@devprotocol.xyz",
+    "bio": "A middleware protocol for building decentralised creator economy.",
+    "company": "",
+    "location": "Japan",
+    "followers": 592,
+    "public_repos": 145,
+    "profile_url": "https://github.com/dev-protocol",
+    "top_repos": [
+      {
+        "full_name": "dev-protocol/dev-patch-092026",
+        "description": "$DEV incident remediation — atomic burn executor via Dev.fee()",
+        "language": "Solidity",
+        "stars": 0
+      },
+      {
+        "full_name": "dev-protocol/sui-mcp-server-wallet-manage",
+        "description": "Comprehensive Sui blockchain MCP server for wallet management, transactions, and blockchain operations",
+        "language": "JavaScript",
+        "stars": 0
+      },
+      {
+        "full_name": "dev-protocol/sui-mcp-server-wallet-management",
+        "description": "Comprehensive Sui blockchain MCP server for wallet management, transactions, and blockchain operations",
+        "language": "JavaScript",
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "Takumi",
+    "login": "Heaven-TS",
+    "public_email": "",
+    "bio": "I am Senior AI and  Full-stack Engineer.\r\n\"Do all things with passion, purpose, and your whole heart.\"",
+    "company": "",
+    "location": "Osaka, Japan",
+    "followers": 580,
+    "public_repos": 9,
+    "profile_url": "https://github.com/Heaven-TS",
+    "top_repos": [
+      {
+        "full_name": "Heaven-TS/AI-workflow-service",
+        "description": "AI-brain-agent-workflow",
+        "language": "TypeScript",
+        "stars": 2
+      },
+      {
+        "full_name": "Heaven-TS/Full-stack-Free-Movie-Streaming-Website",
+        "description": "A modern movie and TV show streaming discovery app built with React 18, Vite, and Tailwind CSS. Browse trending content, filter by genre, search across titles, and watch directly in-browser — all powered by the TMDB API.",
+        "language": "JavaScript",
+        "stars": 6
+      },
+      {
+        "full_name": "Heaven-TS/AI-document-chat-system",
+        "description": "Transform PDFs & documents into intelligent AI conversations. Production-ready RAG (Retrieval Augmented Generation) platform with semantic search, vector embeddings, and multi-provider AI (OpenRouter, OpenAI, Anthropic). Build ChatGPT for your documents in minutes.",
+        "language": "TypeScript",
+        "stars": 5
+      }
+    ]
+  },
+  {
+    "name": "Mitsubishi Electric InnerSource",
+    "login": "MitsubishiElectric-InnerSource",
+    "public_email": "oidate.shingo@dx.mitsubishielectric.co.jp",
+    "bio": "",
+    "company": "",
+    "location": "Japan",
+    "followers": 536,
+    "public_repos": 0,
+    "profile_url": "https://github.com/MitsubishiElectric-InnerSource",
+    "top_repos": []
+  },
+  {
+    "name": "Haruka",
+    "login": "haruka0105",
+    "public_email": "",
+    "bio": "",
+    "company": "Remote",
+    "location": "Japan",
+    "followers": 519,
+    "public_repos": 27,
+    "profile_url": "https://github.com/haruka0105",
+    "top_repos": [
+      {
+        "full_name": "haruka0105/suzuki0209.github.io",
+        "description": null,
+        "language": "HTML",
+        "stars": 0
+      },
+      {
+        "full_name": "haruka0105/Mail_extension",
+        "description": null,
+        "language": "Python",
+        "stars": 0
+      },
+      {
+        "full_name": "haruka0105/Carbey_Home_Dealer",
+        "description": null,
+        "language": "TypeScript",
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "",
+    "login": "inokawa",
+    "public_email": "",
+    "bio": "Frontend Developer",
+    "company": "",
+    "location": "Kanagawa, Japan",
+    "followers": 474,
+    "public_repos": 71,
+    "profile_url": "https://github.com/inokawa",
+    "top_repos": [
+      {
+        "full_name": "inokawa/awesome-text-editing",
+        "description": "Collection of text editing resources and libraries for the web",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "inokawa/chat-viewer",
+        "description": "A library for rendering chats with virtualization",
+        "language": "TypeScript",
+        "stars": 0
+      },
+      {
+        "full_name": "inokawa/unified-engine",
+        "description": "Engine to process multiple files with unified",
+        "language": "JavaScript",
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "FS_UPW_JOB",
+    "login": "MasterCode-V",
+    "public_email": "",
+    "bio": "I'm Fullstack developer",
+    "company": "",
+    "location": "Japan",
+    "followers": 438,
+    "public_repos": 2,
+    "profile_url": "https://github.com/MasterCode-V",
+    "top_repos": [
+      {
+        "full_name": "MasterCode-V/OC",
+        "description": null,
+        "language": "TypeScript",
+        "stars": 1
+      },
+      {
+        "full_name": "MasterCode-V/Corefighter",
+        "description": null,
+        "language": "Python",
+        "stars": 1
+      }
+    ]
+  },
+  {
+    "name": "trust-delta",
+    "login": "trust-delta",
+    "public_email": "",
+    "bio": "Frontend engineer from Japan. Fell in love with Claude Code and now I spend most of my  time building tools around it.",
+    "company": "",
+    "location": "Japan",
+    "followers": 431,
+    "public_repos": 12,
+    "profile_url": "https://github.com/trust-delta",
+    "top_repos": [
+      {
+        "full_name": "trust-delta/bearing",
+        "description": "The aim discipline as a Claude Code plugin: a purpose tree the agent may not rewrite, conversation handoff across sessions and machines, and drift detection between purpose and means. No engine, no server, no Rust.",
+        "language": "JavaScript",
+        "stars": 0
+      },
+      {
+        "full_name": "trust-delta/AutoPlayNotes",
+        "description": "キーボード演奏系アプリを楽譜どおりに自動キー入力で演奏させる Windows ツール（数字譜/テキスト/MIDI・五線譜エディタ・音声プレビュー）",
+        "language": "Python",
+        "stars": 0
+      },
+      {
+        "full_name": "trust-delta/homebrew-tmai",
+        "description": "Homebrew tap for tmai — install via 'brew tap trust-delta/tmai && brew install tmai'",
+        "language": "Ruby",
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "",
+    "login": "kaorun343",
+    "public_email": "",
+    "bio": "",
+    "company": "",
+    "location": "Japan",
+    "followers": 420,
+    "public_repos": 42,
+    "profile_url": "https://github.com/kaorun343",
+    "top_repos": [
+      {
+        "full_name": "kaorun343/phylotree-builder",
+        "description": null,
+        "language": "TypeScript",
+        "stars": 1
+      },
+      {
+        "full_name": "kaorun343/next-app-swr-monorepo",
+        "description": null,
+        "language": "JavaScript",
+        "stars": 0
+      },
+      {
+        "full_name": "kaorun343/graphql-code-generator",
+        "description": "A tool for generating code based on a GraphQL schema and GraphQL operations (query/mutation/subscription), with flexible support for custom plugins. ",
+        "language": null,
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "Machan",
+    "login": "machan1119",
+    "public_email": "",
+    "bio": "😎 AI & Crypto Trading & fullstack developer building trading bots, smart chatbots, voice agents, AI automtaion and web platforms.",
+    "company": "",
+    "location": "Osaka, Japan",
+    "followers": 404,
+    "public_repos": 24,
+    "profile_url": "https://github.com/machan1119",
+    "top_repos": [
+      {
+        "full_name": "machan1119/Solana-Arbitrage",
+        "description": "Solana arbitrage bot https://t.me/insionCEO ||| Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana Arbitrage Bot Solana A",
+        "language": null,
+        "stars": 1
+      },
+      {
+        "full_name": "machan1119/tradecopia-frontend",
+        "description": null,
+        "language": "TypeScript",
+        "stars": 0
+      },
+      {
+        "full_name": "machan1119/Tradecopia-project",
+        "description": null,
+        "language": "TypeScript",
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "チームみらいサポーター",
+    "login": "team-mirai-volunteer",
+    "public_email": "",
+    "bio": "チームみらいのサポーターが開発結果を共有するための場です",
+    "company": "",
+    "location": "Japan",
+    "followers": 343,
+    "public_repos": 30,
+    "profile_url": "https://github.com/team-mirai-volunteer",
+    "top_repos": [
+      {
+        "full_name": "team-mirai-volunteer/video-processor",
+        "description": "動画のプロセッシングを行うツール",
+        "language": "TypeScript",
+        "stars": 17
+      },
+      {
+        "full_name": "team-mirai-volunteer/post-checker",
+        "description": "SNS投稿や動画台本などをチェックできるリポジトリ",
+        "language": "TypeScript",
+        "stars": 8
+      },
+      {
+        "full_name": "team-mirai-volunteer/rs-vis",
+        "description": "政府可視化プロジェクトメインレポ",
+        "language": "TypeScript",
+        "stars": 4
+      }
+    ]
+  },
+  {
+    "name": "えだまめ",
+    "login": "EdamAme-x",
+    "public_email": "",
+    "bio": "I love having fun!",
+    "company": "High School Student",
+    "location": "Japan Tokio",
+    "followers": 342,
+    "public_repos": 417,
+    "profile_url": "https://github.com/EdamAme-x",
+    "top_repos": [
+      {
+        "full_name": "EdamAme-x/CredSweeper",
+        "description": "CredSweeper is a tool to detect credentials in any directories or files. CredSweeper could help users to detect unwanted exposure of credentials (such as token, passwords, api keys etc.) in advance. By scanning lines, filtering, and using AI model as option, CredSweeper reports lines with possible credentials, where the line is, and expected type o",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "EdamAme-x/pentect-bench",
+        "description": null,
+        "language": "Python",
+        "stars": 1
+      },
+      {
+        "full_name": "EdamAme-x/jr.mitou.org",
+        "description": "小中高生クリエータ支援プログラム『未踏ジュニア』の公式Webサイトです! YAML ファイルで更新できます 🛠💨",
+        "language": null,
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "デジタル民主主義2030",
+    "login": "digitaldemocracy2030",
+    "public_email": "",
+    "bio": "デジタル民主主義2030プロジェクト (Digital Democracy 2030)",
+    "company": "",
+    "location": "Japan",
+    "followers": 311,
+    "public_repos": 21,
+    "profile_url": "https://github.com/digitaldemocracy2030",
+    "top_repos": [
+      {
+        "full_name": "digitaldemocracy2030/dd2030-wiki",
+        "description": "LLM-maintained wiki for Digital Democracy 2030",
+        "language": "TypeScript",
+        "stars": 0
+      },
+      {
+        "full_name": "digitaldemocracy2030/discord_ddb_log",
+        "description": null,
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "digitaldemocracy2030/slack-logs",
+        "description": null,
+        "language": "Python",
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "ラムダ技術部",
+    "login": "lambda-tech-club",
+    "public_email": "",
+    "bio": "ラムダ技術部の遊び場",
+    "company": "",
+    "location": "Japan",
+    "followers": 298,
+    "public_repos": 13,
+    "profile_url": "https://github.com/lambda-tech-club",
+    "top_repos": [
+      {
+        "full_name": "lambda-tech-club/kakigori-api-public",
+        "description": "Backend API for a shaved ice (kakigori) ordering system.",
+        "language": "Go",
+        "stars": 2
+      },
+      {
+        "full_name": "lambda-tech-club/ultimate-scrimp-hotdog",
+        "description": "【ケチ】限界節約ホットドッグのレシピ",
+        "language": null,
+        "stars": 6
+      },
+      {
+        "full_name": "lambda-tech-club/vertical-video-generator",
+        "description": "横動画から縦動画を生成するスクリプト",
+        "language": "Shell",
+        "stars": 11
+      }
+    ]
+  },
+  {
+    "name": "Myzu Wakatoshi",
+    "login": "Wakatoshi-Myzu",
+    "public_email": "",
+    "bio": "Hello World",
+    "company": "",
+    "location": "Japan",
+    "followers": 271,
+    "public_repos": 8,
+    "profile_url": "https://github.com/Wakatoshi-Myzu",
+    "top_repos": [
+      {
+        "full_name": "Wakatoshi-Myzu/gitfom",
+        "description": "manage and detect your follower or following your github account",
+        "language": "TypeScript",
+        "stars": 1
+      },
+      {
+        "full_name": "Wakatoshi-Myzu/myzu-movie",
+        "description": null,
+        "language": "TypeScript",
+        "stars": 5
+      },
+      {
+        "full_name": "Wakatoshi-Myzu/pokedex",
+        "description": null,
+        "language": "CSS",
+        "stars": 3
+      }
+    ]
+  },
+  {
+    "name": "Tatsuya.K",
+    "login": "tatsuyakuroda",
+    "public_email": "",
+    "bio": "@ Snr. Software Engineer @\r\n𝗔𝗜-𝗙𝗼𝗰𝘂𝘀𝗲𝗱 𝗙𝘂𝗹𝗹 𝗦𝘁𝗮𝗰𝗸 𝗪𝗲𝗯/𝗠𝗼𝗯𝗶𝗹𝗲 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿",
+    "company": "",
+    "location": "Japan",
+    "followers": 252,
+    "public_repos": 60,
+    "profile_url": "https://github.com/tatsuyakuroda",
+    "top_repos": [
+      {
+        "full_name": "tatsuyakuroda/AI-Books",
+        "description": null,
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "tatsuyakuroda/omnix-discord-bot",
+        "description": "Orchestrate custom Discord Bot triggers powered by local Omnix AI models.",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "tatsuyakuroda/whhatsapp-forward-bot",
+        "description": null,
+        "language": null,
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "Kanotsu",
+    "login": "mistery220",
+    "public_email": "",
+    "bio": "",
+    "company": "",
+    "location": "Kawaguchi city, Japan",
+    "followers": 221,
+    "public_repos": 46,
+    "profile_url": "https://github.com/mistery220",
+    "top_repos": [
+      {
+        "full_name": "mistery220/happy-felix",
+        "description": "Without a doubt a portfolio website is a unique way to showcase your work and let others know about yourself. It’s like an evergreen platform for your projects, case studies, and information about you. However, Why why did i choose Next.js? Because it is a React framework with Server-Side Rendering, which is good for SEO.",
+        "language": "TypeScript",
+        "stars": 0
+      },
+      {
+        "full_name": "mistery220/Solana_Token_Freezer",
+        "description": "This bot is built version and original version can be purchased by contacting me. Additional update like jito mode and other features can be done at any time with requirment",
+        "language": "TypeScript",
+        "stars": 0
+      },
+      {
+        "full_name": "mistery220/bluemoon-NFT-contract",
+        "description": "bluemoon-NFT-contract",
+        "language": "TypeScript",
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "Qin Salon",
+    "login": "qin-salon",
+    "public_email": "support@qin.salon",
+    "bio": "Qinの開発拠点",
+    "company": "",
+    "location": "Japan",
+    "followers": 205,
+    "public_repos": 14,
+    "profile_url": "https://github.com/qin-salon",
+    "top_repos": [
+      {
+        "full_name": "qin-salon/template-next-app-router-tailwind",
+        "description": null,
+        "language": "JavaScript",
+        "stars": 14
+      },
+      {
+        "full_name": "qin-salon/qin-ui",
+        "description": null,
+        "language": "TypeScript",
+        "stars": 0
+      },
+      {
+        "full_name": "qin-salon/study-package",
+        "description": null,
+        "language": "JavaScript",
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "chekusu, Inc.",
+    "login": "chekusu",
+    "public_email": "contact@chekusu.com",
+    "bio": "We build next-generation social infrastructure connecting humans, AI, and Crypto. Through AI Agent networks managing capital and information flows, we enable pe",
+    "company": "",
+    "location": "Japan",
+    "followers": 195,
+    "public_repos": 16,
+    "profile_url": "https://github.com/chekusu",
+    "top_repos": [
+      {
+        "full_name": "chekusu/pinku-chat-plugin",
+        "description": "Let your AI agent find dates for you: Pinku.chat plugin for Claude Code, Gemini CLI, Codex, Grok Bot, OpenClaw, Hermes and Cursor (18+)",
+        "language": "Python",
+        "stars": 0
+      },
+      {
+        "full_name": "chekusu/mokutori-agent-plugin",
+        "description": "Open-source Mokutori Personal Agent plugin for Grok Bot, Codex and Claude Code",
+        "language": "Python",
+        "stars": 2
+      },
+      {
+        "full_name": "chekusu/dropack.app",
+        "description": "The Dropack website — 16 languages, local-first media sharing, and an offline-buildable static site.",
+        "language": "JavaScript",
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "Kanon🏳️‍⚧️奏音",
+    "login": "kons10",
+    "public_email": "",
+    "bio": "Student,Hacker,MtF\r\n@Linux-jam\r\n@ams-design\r\n@ams-www",
+    "company": "ANTI DEEP STATE",
+    "location": "Oyama,Tochigi,Japan",
+    "followers": 182,
+    "public_repos": 23,
+    "profile_url": "https://github.com/kons10",
+    "top_repos": [
+      {
+        "full_name": "kons10/inm",
+        "description": null,
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "kons10/Calchrome-web",
+        "description": null,
+        "language": "HTML",
+        "stars": 0
+      },
+      {
+        "full_name": "kons10/onChromeOS",
+        "description": "dummy os of chromeOS",
+        "language": "JavaScript",
+        "stars": 1
+      }
+    ]
+  },
+  {
+    "name": "Alaya Lab",
+    "login": "AlayaLab",
+    "public_email": "",
+    "bio": "",
+    "company": "",
+    "location": "Japan",
+    "followers": 177,
+    "public_repos": 31,
+    "profile_url": "https://github.com/AlayaLab",
+    "top_repos": [
+      {
+        "full_name": "AlayaLab/pawa-pipeline",
+        "description": "Data pipeline for PAWA: Panoramic Action-conditioned World Modeling for Multiple Agents. Dataset: https://huggingface.co/datasets/YOUSIKI/pawa-dataset",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "AlayaLab/AnyGameRenderer",
+        "description": null,
+        "language": "Python",
+        "stars": 58
+      },
+      {
+        "full_name": "AlayaLab/MeshAxiom",
+        "description": "MeshAxiom: An Agent-Native 3D Foundation Stack for Programmable Worlds",
+        "language": "Python",
+        "stars": 38
+      }
+    ]
+  },
+  {
+    "name": "Alireza Goudarzi",
+    "login": "whatsinfinitum",
+    "public_email": "",
+    "bio": "Computer Science Ph.D., AI Researcher, founder, entrepreneur. I'm a tech lead at Copilot Model team working on Copilot Custom Models for GitHub Enterprise. ",
+    "company": "@github ",
+    "location": "Tokyo, Japan",
+    "followers": 168,
+    "public_repos": 11,
+    "profile_url": "https://github.com/whatsinfinitum",
+    "top_repos": [
+      {
+        "full_name": "whatsinfinitum/ncps",
+        "description": "PyTorch and TensorFlow implementation of NCP, LTC, and CfC wired neural models",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "whatsinfinitum/bullet3",
+        "description": "Bullet Physics SDK: real-time collision detection and multi-physics simulation for VR, games, visual effects, robotics, machine learning etc.",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "whatsinfinitum/RWKV-LM",
+        "description": "RWKV is an RNN with transformer-level LLM performance. It can be directly trained like a GPT (parallelizable). So it's combining the best of RNN and transformer - great performance, fast inference, saves VRAM, fast training, \"infinite\" ctx_len, and free sentence embedding.",
+        "language": null,
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "nazozokc",
+    "login": "nazozokc",
+    "public_email": "",
+    "bio": "often make CLI tool.",
+    "company": "National Institute of Technology HAKODATE College",
+    "location": "Japan",
+    "followers": 166,
+    "public_repos": 42,
+    "profile_url": "https://github.com/nazozokc",
+    "top_repos": [
+      {
+        "full_name": "nazozokc/typescript-sdk",
+        "description": "The official TypeScript SDK for Model Context Protocol servers and clients",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "nazozokc/agent-memory-mcp",
+        "description": "This tool is agent memory to mcp server",
+        "language": "TypeScript",
+        "stars": 1
+      },
+      {
+        "full_name": "nazozokc/bun-cli-template",
+        "description": null,
+        "language": "TypeScript",
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "Sato Haruto",
+    "login": "satoharuto961-dev",
+    "public_email": "",
+    "bio": "Cometstack – Full Stack Developer | Based in Sendai, Japan\r\n\r\nA passionate full stack developer who lives and breathes code. Cometstack spends most of their tim",
+    "company": "remote",
+    "location": "Sendai in Japan",
+    "followers": 159,
+    "public_repos": 8,
+    "profile_url": "https://github.com/satoharuto961-dev",
+    "top_repos": [
+      {
+        "full_name": "satoharuto961-dev/simple-e-commerce-website-MERN-",
+        "description": null,
+        "language": "JavaScript",
+        "stars": 2
+      },
+      {
+        "full_name": "satoharuto961-dev/satoharuto961-dev",
+        "description": null,
+        "language": null,
+        "stars": 2
+      },
+      {
+        "full_name": "satoharuto961-dev/auto-modeler-evolve",
+        "description": null,
+        "language": "Python",
+        "stars": 4
+      }
+    ]
+  },
+  {
+    "name": "4U",
+    "login": "Y95918",
+    "public_email": "",
+    "bio": "I am a Full Stack developer with hands-on latest trends in Web and Blockchain development.",
+    "company": "Individual",
+    "location": "Tokyo, Japan",
+    "followers": 148,
+    "public_repos": 54,
+    "profile_url": "https://github.com/Y95918",
+    "top_repos": [
+      {
+        "full_name": "Y95918/simple_intro_blockchain",
+        "description": null,
+        "language": "JavaScript",
+        "stars": 0
+      },
+      {
+        "full_name": "Y95918/node_skeleton",
+        "description": null,
+        "language": "JavaScript",
+        "stars": 0
+      },
+      {
+        "full_name": "Y95918/react-loading-ts",
+        "description": null,
+        "language": "TypeScript",
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "koyashiro",
+    "login": "koyashiro",
+    "public_email": "",
+    "bio": "Web developer.\r\nRust / TypeScript / Go / C#",
+    "company": "SODA Inc. @snkrdunk",
+    "location": "Tokyo, Japan",
+    "followers": 146,
+    "public_repos": 110,
+    "profile_url": "https://github.com/koyashiro",
+    "top_repos": [
+      {
+        "full_name": "koyashiro/windows-screenshot-renamer",
+        "description": null,
+        "language": "Rust",
+        "stars": 0
+      },
+      {
+        "full_name": "koyashiro/ansible-collection-debian-base",
+        "description": "Baseline Ansible collection for Debian systems",
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "koyashiro/home-environments",
+        "description": null,
+        "language": "Rust",
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "",
+    "login": "Avanade-Region-Japan",
+    "public_email": "",
+    "bio": "",
+    "company": "",
+    "location": "Japan",
+    "followers": 135,
+    "public_repos": 1,
+    "profile_url": "https://github.com/Avanade-Region-Japan",
+    "top_repos": [
+      {
+        "full_name": "Avanade-Region-Japan/copilot-metrics-viewer-avanade-region-japan",
+        "description": "Tool to visualize the Copilot metrics provided via the Copilot Business Metrics API ",
+        "language": "TypeScript",
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "name": "Sekai World",
+    "login": "Sekai-World",
+    "public_email": "dev@sekai.best",
+    "bio": "Sekai Viewer and so on",
+    "company": "",
+    "location": "Japan",
+    "followers": 135,
+    "public_repos": 29,
+    "profile_url": "https://github.com/Sekai-World",
+    "top_repos": [
+      {
+        "full_name": "Sekai-World/coderabbit",
+        "description": null,
+        "language": null,
+        "stars": 0
+      },
+      {
+        "full_name": "Sekai-World/sekai-i18n-reborn",
+        "description": "i18n files for Sekai Viewer Reborn",
+        "language": "Python",
+        "stars": 0
+      },
+      {
+        "full_name": "Sekai-World/msgpack-pjsekai",
+        "description": null,
+        "language": "C",
+        "stars": 2
+      }
+    ]
+  },
+  {
+    "name": "nino",
+    "login": "dninomiya",
+    "public_email": "",
+    "bio": "Web Developer.",
+    "company": "@deer-inc ",
+    "location": "Japan",
+    "followers": 134,
+    "public_repos": 76,
+    "profile_url": "https://github.com/dninomiya",
+    "top_repos": [
+      {
+        "full_name": "dninomiya/skills",
+        "description": null,
+        "language": "TypeScript",
+        "stars": 4
+      },
+      {
+        "full_name": "dninomiya/use-cache-static-demo",
+        "description": null,
+        "language": "TypeScript",
+        "stars": 0
+      },
+      {
+        "full_name": "dninomiya/remark-code-to-slot",
+        "description": null,
+        "language": "TypeScript",
+        "stars": 0
+      }
+    ]
+  }
+]

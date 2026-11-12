@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Anthony Fu",
+    "login": "antfu",
+    "public_email": "",
+    "bio": "A ship in harbor is safe, but that is not what ships are built for.",
+    "company": "@vercel | @nuxt",
+    "location": "Gifu, Japan",
+    "followers": 40775,
+    "public_repos": 406,
+    "profile_url": "https://github.com/antfu",
+    "top_repos": []
+  },
+  {
+    "name": "Keijiro Takahashi",
+    "login": "keijiro",
+    "public_email": "",
+    "bio": "",
+    "company": "Unity Technologies Japan",
+    "location": "Japan",
+    "followers": 23965,
+    "public_repos": 949,
+    "profile_url": "https://github.com/keijiro",
+    "top_repos": []
+  },
+  {
+    "name": "kenji",
+    "login": "kenjinote",
+    "public_email": "",
+    "bio": "I like Win32API, Assembly, C++ and Cryptography. Exploring Quantum Computing. Microsoft MVP Since 2017 - 2026🐳",
+    "company": "",
+    "location": "Japan",
+    "followers": 23558,
+    "public_repos": 679,
+    "profile_url": "https://github.com/kenjinote",
+    "top_repos": []
+  },
+  {
+    "name": "Wei Wang",
+    "login": "onevcat",
+    "public_email": "",
+    "bio": "A creator creating for creators: thinking, building, evolving.",
+    "company": "LINE Corp.",
+    "location": "Yokohama, Japan / China",
+    "followers": 15889,
+    "public_repos": 264,
+    "profile_url": "https://github.com/onevcat",
+    "top_repos": []
+  },
+  {
+    "name": "mattn",
+    "login": "mattn",
+    "public_email": "",
+    "bio": "Long-time Golang user&contributor, Google Dev Expert for Go, and author of many Go tools, Vim plugin author. Windows hacker C#/Java/C/C++, ex-GitHubStars",
+    "company": "",
+    "location": "Osaka, Japan",
+    "followers": 13528,
+    "public_repos": 2235,
+    "profile_url": "https://github.com/mattn",
+    "top_repos": []
+  },
+  {
+    "name": "Takuya Matsuyama",
+    "login": "craftzdog",
+    "public_email": "",
+    "bio": "Digital crafts(man|dog)\r\n\r\n╥━━━━━━━━╭━━╮━━┳ ╢╭╮╭━━━━━┫┃▋▋━▅┣ ╢┃╰┫┈┈┈┈┈┃┃┈┈╰┫┣ ╢╰━┫┈┈┈┈┈╰╯╰┳━╯┣ ╢┊┊┃┏┳┳━━┓┏┳┫┊┊┣ ╨━━┗┛┗┛━━┗┛┗┛━━┻",
+    "company": "Freelancer",
+    "location": "Osaka, Japan",
+    "followers": 11799,
+    "public_repos": 171,
+    "profile_url": "https://github.com/craftzdog",
+    "top_repos": []
+  },
+  {
+    "name": "Y11",
+    "login": "XiaomingX",
+    "public_email": "",
+    "bio": "Software Dev @ X | Linux, Java, Spring, Python, Golang, Next.js | Open Source Enthusiast | LLM Innovator | M.Sc. in Software Engineering 🚀",
+    "company": "Jobleap.cn",
+    "location": "Japan",
+    "followers": 11316,
+    "public_repos": 67,
+    "profile_url": "https://github.com/XiaomingX",
+    "top_repos": []
+  },
+  {
+    "name": "Yukihiro \"Matz\" Matsumoto",
+    "login": "matz",
+    "public_email": "",
+    "bio": "",
+    "company": "Ruby Association,NaCl",
+    "location": "Matsue, Japan",
+    "followers": 10759,
+    "public_repos": 16,
+    "profile_url": "https://github.com/matz",
+    "top_repos": []
+  },
+  {
+    "name": "Denny Britz",
+    "login": "dennybritz",
+    "public_email": "",
+    "bio": "",
+    "company": "",
+    "location": "Tokyo, Japan",
+    "followers": 9848,
+    "public_repos": 62,
+    "profile_url": "https://github.com/dennybritz",
+    "top_repos": []
+  },
+  {
+    "name": "Daichi Furiya",
+    "login": "wasabeef",
+    "public_email": "",
+    "bio": "Google Developers Expert for Android",
+    "company": "CyberAgent, Inc.",
+    "location": "Tokyo, Japan",
+    "followers": 9718,
+    "public_repos": 65,
+    "profile_url": "https://github.com/wasabeef",
+    "top_repos": []
+  }
+]
